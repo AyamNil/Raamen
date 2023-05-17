@@ -20,13 +20,14 @@ namespace Raamen.Views
         protected void Button3_Click(object sender, EventArgs e)
         {
             UserRepository rp = new UserRepository();
-            /*rp.InsertUser(tbUsername, tbEmail, , TbPassword, tbPasswordConfirm, );*/
+            /*rp.InsertUser(tbUsername, tbEmail, , TbPassword, tbPasswordConfirm, role);*/
             Response.Redirect("~/Login.aspx");
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            string role = DropDownList1.SelectedValue.ToString();
         }
     }
 }
