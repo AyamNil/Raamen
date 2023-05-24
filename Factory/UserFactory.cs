@@ -8,7 +8,7 @@ namespace Lab.Factory
 {
     public class UserFactory
     {
-        public static User newUser(int id, string Username, string Email, string gender, string password, int Role_Id)
+        public User newUser(string Username, string Email, string gender, string password, int Role_Id)
         {
             User addUser = new User();
             addUser.Username = Username;

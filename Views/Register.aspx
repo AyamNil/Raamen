@@ -16,12 +16,13 @@
                     <br />
                 </div>
                 <div>
-                    <asp:Label ID="LblGender" runat="server" Text="Gender"></asp:Label>
-                    <br />
-                    <div>
-                        <asp:RadioButton GroupName="gender" ID="Male" runat="server" Text="Male" />
-                        <asp:RadioButton GroupName="gender" ID="Female" runat="server" Text="Female" />
-                    </div>
+                <div>
+                    <asp:Label ID="Label2" runat="server" Text="Gender"></asp:Label>
+                    <asp:RadioButtonList ID="radioGender" runat="server">
+                    <asp:ListItem>Male</asp:ListItem>
+                    <asp:ListItem>Female</asp:ListItem>
+                    </asp:RadioButtonList>
+               </div>
 
                 </div>
                 <div>
@@ -38,8 +39,7 @@
                 </div>
                 <div>
                     <asp:Label ID="LblRole" runat="server" Text="Role"></asp:Label> <br />
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataValueField="name"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [name] FROM [Role]"></asp:SqlDataSource>
+                    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
                 </div>
                 <asp:Button ID="Button3" runat="server" Text="Register" OnClick="Button3_Click" Width="207px" />
 </asp:Content>

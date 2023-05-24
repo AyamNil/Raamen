@@ -1,22 +1,25 @@
-﻿using Raamen.Model;
+﻿using Lab.Factory;
+using Raamen.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Raamen.Factory;
 
 namespace Raamen.Repository
 {
     public class UserRepository
     {
         Database1Entities db = new Database1Entities();
-        public void InsertUser(string Username, string Email,string gender, string password, int RoleId)
+        public User InsertUser(string Username, string Email,string gender, string password, int RoleId)
         {
-            User inUser = new User();
-            inUser.Username = Username;
-            inUser.Email = Email;
-            inUser.Gender = gender;
-            inUser.Password = password;
-            inUser.Role_Id = RoleId;
+            UserFactory uf = new UserFactory();
+            User u = uf.newUser(Username, Email, gender, password, Convert.ToInt32(RoleId));
+
+            db.Users.Add(u);
+            db.SaveChanges();
+
+            return u;
         }
 
         public void updateUser(int id,string Username, string Email, string gender, string password, int RoleId)

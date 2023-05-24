@@ -7,7 +7,7 @@
                 <br />
                 <asp:TextBox ID="tbUsername" runat="server" Width="196px"></asp:TextBox>
                 <br />
-                <asp:Label ID="LblError1" runat="server" Text="Error" ForeColor="red"></asp:Label>
+                <asp:Label ID="LblError1" runat="server" Text=" " ForeColor="red"></asp:Label>
                 <br />
                 <asp:Label ID="LblPassword" runat="server" Text="Password"></asp:Label>
                 <br />
@@ -18,5 +18,5 @@
                 <asp:CheckBox ID="CbRemember" runat="server" />
                 <asp:Label ID="lblRemember" runat="server" Text="Remember Me"></asp:Label>
                 <br />
-                <asp:Button ID="Button3" runat="server" Text="Login" Width="207px" />
+                <asp:Button ID="Button3" runat="server" Text="Login" OnClick="Button3_Click" Width="207px" />
 </asp:Content>

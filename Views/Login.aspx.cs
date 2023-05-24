@@ -13,8 +13,8 @@ namespace Raamen.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["user_cookie"];
-            tbUsername.Text = cookie != null ? cookie.Value : null;
+            HttpCookie cookie = Request.Cookies["email"];
+            tbUsername.Text = cookie != null ? cookie.Value : "";
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -30,8 +30,9 @@ namespace Raamen.Views
                     cookie.Value = tbUsername.Text;
                     cookie.Expires = DateTime.Now.AddHours(3);
                     Response.Cookies.Add(cookie);
+                    
                 }
-                Response.Redirect("~/ViewAdmin.aspx");
+                Response.Redirect("~/Views/Home.aspx");
             }
         }
     }
