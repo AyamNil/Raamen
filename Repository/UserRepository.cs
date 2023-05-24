@@ -17,6 +17,9 @@ namespace Raamen.Repository
             inUser.Gender = gender;
             inUser.Password = password;
             inUser.Role_Id = RoleId;
+
+            db.Users.Add(inUser);
+            db.SaveChanges();
         }
 
         public void updateUser(int id,string Username, string Email, string gender, string password, int RoleId)

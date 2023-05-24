@@ -14,9 +14,9 @@ namespace Raamen.Views
         Database1Entities db = new Database1Entities();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
         }
-
+           
         protected void Button3_Click(object sender, EventArgs e)
         {
             UserRepository rp = new UserRepository();
