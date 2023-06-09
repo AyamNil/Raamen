@@ -11,7 +11,7 @@ namespace Raamen.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Debug.WriteLine(Session["userId"].ToString(), Session["userRole"].ToString());
         }
     }
 }

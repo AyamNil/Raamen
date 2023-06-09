@@ -13,21 +13,27 @@ namespace Raamen.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["email"];
-            tbUsername.Text = cookie != null ? cookie.Value : "";
+            HttpCookie cookie = Request.Cookies["username"];
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
+        protected void LoginBtn_Click(object sender, EventArgs e)
         {
             UserRepository u = new UserRepository();
-            User a = u.checkUser(tbUsername.Text, tbPassword.Text);
+            RoleRepository r = new RoleRepository();
+
+            User a = u.checkUser(TbUsername.Text, TbPassword.Text);
             if (a != null)
             {
-                Session["user"] = a;
+                User currentUser = u.findUserByUsername(TbUsername.Text);
+                
+                
+                Session["userId"] = currentUser.Id;
+                Session["userRole"] = r.getRoleName(currentUser.Role_Id);
+
                 if (CbRemember.Checked)
                 {
                     HttpCookie cookie = new HttpCookie("user_cookie");
-                    cookie.Value = tbUsername.Text;
+                    cookie.Value = TbUsername.Text;
                     cookie.Expires = DateTime.Now.AddHours(3);
                     Response.Cookies.Add(cookie);
                     

@@ -1,10 +1,7 @@
 ﻿using Lab.Factory;
 using Raamen.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Raamen.Factory;
 
 namespace Raamen.Repository
 {
@@ -44,6 +41,12 @@ namespace Raamen.Repository
         public User checkUser(string username, string password)
         {
             User u = (from user in db.Users where user.Username == username && user.Password == password select user).FirstOrDefault();
+            return u;
+        }
+
+        public User findUserByUsername(string username)
+        {
+            User u = (from user in db.Users where user.Username == username select user).FirstOrDefault();
             return u;
         }
     }

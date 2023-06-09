@@ -14,5 +14,10 @@ namespace Raamen.Repository
             List<Role> roles = (from r in db.Roles select r).ToList();
             return roles;
         }
+
+        public String getRoleName(int id)
+        {
+           return (from role in db.Roles where role.Id == id select role.name).FirstOrDefault();
+        }
     }
 }

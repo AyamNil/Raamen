@@ -11,88 +11,124 @@ namespace Raamen.Views
 {
 
 
-    public partial class WebForm1
+    public partial class AddRamen
     {
 
         /// <summary>
-        /// LblUsername control.
+        /// Labelitemname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUsername;
+        protected global::System.Web.UI.WebControls.Label Labelitemname;
 
         /// <summary>
-        /// TbUsername control.
+        /// itemnameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbUsername;
+        protected global::System.Web.UI.WebControls.TextBox itemnameTxt;
 
         /// <summary>
-        /// LblError1 control.
+        /// itemnameValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblError1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator itemnameValidator;
 
         /// <summary>
-        /// LblPassword control.
+        /// LabelBroth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPassword;
+        protected global::System.Web.UI.WebControls.Label LabelBroth;
 
         /// <summary>
-        /// TbPassword control.
+        /// brothTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbPassword;
+        protected global::System.Web.UI.WebControls.TextBox brothTxt;
 
         /// <summary>
-        /// LblError2 control.
+        /// LabelPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblError2;
+        protected global::System.Web.UI.WebControls.Label LabelPrice;
 
         /// <summary>
-        /// CbRemember control.
+        /// PriceTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CbRemember;
+        protected global::System.Web.UI.WebControls.TextBox PriceTxt;
 
         /// <summary>
-        /// lblRemember control.
+        /// Pricevalidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRemember;
+        protected global::System.Web.UI.WebControls.CompareValidator Pricevalidator;
 
         /// <summary>
-        /// LoginBtn control.
+        /// LabelMeat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginBtn;
+        protected global::System.Web.UI.WebControls.Label LabelMeat;
+
+        /// <summary>
+        /// DropDownMeat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownMeat;
+
+        /// <summary>
+        /// SubmitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitBtn;
+
+        /// <summary>
+        /// CancelBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CancelBtn;
+
+        /// <summary>
+        /// ButtonBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonBack;
     }
 }

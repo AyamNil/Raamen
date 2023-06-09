@@ -15,7 +15,8 @@
                 <div>
                     <asp:Button ID="LogInbtn" runat="server" Text="Log In" OnClick="LogInbtn_Click"/>
                     <asp:Button ID="RegisterBtn" runat="server" Text="Register" OnClick="RegisterBtn_Click" />
-                    <asp:Button ID="LogOutBtn" runat="server" Text="Log Out" OnClick="LogOutBtn_Click" />
+                    <asp:Button ID="LogOutBtn" Visible="false" runat="server" Text="Log Out" OnClick="LogOutBtn_Click" />
+                    <asp:Button ID="StaffBtn" Visible="false" runat="server" Text="Log Out" OnClick="StaffBtn_Click" />
                </div>
            </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
