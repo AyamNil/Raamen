@@ -19,7 +19,7 @@ namespace Raamen.Views
             MeatRepository rp = new MeatRepository();
             DropDownMeat.DataSource = rp.getMeat();
             DropDownMeat.DataTextField = "Name";
-            DropDownMeat.DataValueField = "Name";
+            DropDownMeat.DataValueField = "ID";
             DropDownMeat.DataBind();
         }
         protected void SubmitBtn_Click(object sender, EventArgs e)
